@@ -35,7 +35,7 @@ testing-framework/
 
 ## Running tests
 Locally
-pytest -k test
+pytest -k test --chromedriver /path/to/chromedriver
 
 On Moon2 Cluster
 pytest -k test --remote

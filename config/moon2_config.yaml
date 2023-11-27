@@ -1,0 +1,12 @@
+moon2:
+  cluster_url: "https://your_moon2_cluster_url"
+  browser: "chrome"  # or "firefox" if you prefer Firefox
+  headless: true     # Set to false if you want to see the browser during test execution
+  timeout: 10        # Default timeout for Selene commands in seconds
+  retries: 3         # Number of retries for flaky tests
+  screenshots:
+    enabled: true    # Enable or disable taking screenshots on test failure
+    path: "screenshots/"  # Path to save screenshots
+  logs:
+    enabled: true    # Enable or disable logging
+    level: "info"    # Logging level: "debug", "info", "warning", "error"

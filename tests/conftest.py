@@ -23,6 +23,11 @@ def selenium_browser(request):
         # Set up Moon2 cluster browser configuration
         browser.config.driver = browser.Chrome(**capabilities)
     else:
+        # Check if --chromedriver option is provided to run tests locally with a specific Chromedriver path
+        chromedriver_path = request.config.getoption('--chromedriver')
+        if chromedriver_path:
+            capabilities.update({'executable_path': chromedriver_path})
+
         # Set up local browser configuration (e.g., ChromeDriver path, etc.)
         capabilities.update({
             'chromeOptions': {
